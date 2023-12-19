@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Header */
@@ -37,7 +37,7 @@ header a {
 }
 
 h1 {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -49,7 +49,7 @@ h1 {
     list-style-type: none;
 }
 
-menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -57,7 +57,7 @@ menu > li {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Nav bar styles with dropdown toggle */
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -82,7 +82,7 @@ nav {
     font-size: 2rem;
 }
 
-/* Main Content */
+/* Main content */
 main {
     background-color: blueviolet;
     flex: 1 0 auto;
@@ -92,4 +92,29 @@ main {
 /* Footer */
 footer {
     background-color: brown;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }
