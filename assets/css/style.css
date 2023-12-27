@@ -90,6 +90,13 @@ nav {
 
 /* Main content */
 main {
+            /* Enlarge main element to push footer down */
+            flex: 1 0 auto;
+            /* Add margin at the top to prevent content from being covered by the header */
+            margin-top: 47px;
+            /* Enable flex properties for child elements */
+            display: flex;
+            flex-direction: column;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
@@ -143,7 +150,7 @@ main {
     padding: 0 20px;
 }
 
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
@@ -167,7 +174,7 @@ hr {
 
 /* Meetups section */
 #times {
-    background: url(../images/cork-run.jpg) no-repeat center center / cover;
+    background: url(../images/cork-run.jpg) no-repeat center / cover;
     /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
@@ -182,12 +189,12 @@ hr {
     Each div will expand to fil the vailabel space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
 #times h3 {
-    /* Override the general color set in general styles */
+    /* Override the heading color set in general styles */
     color: #fafafa
 }
 
@@ -199,6 +206,52 @@ hr {
 
 #photos {
     line-height: 0;
+}
+
+/* Form page*/
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#signup-form {
+    color:#ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding:30px;
+}
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    color: #fafafa;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    background: transparent;
+    margin: 5px 0 20px;
+    width: 100%;
+    height: 25px;
+    padding: 0 5px;
+}
+
+.join-button {
+    border-radius: 2px;
+    background-color: #454b1b;
+    color: #fafafa;
+    font-size: 100%;
+    margin-top: 20px;
+    padding: 15px 32px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Footer */
@@ -288,11 +341,34 @@ hr {
     #photos {
         column-count: 3;
     }
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #a98aec;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
+    
 }
 
 /* Media query: laptops and desktops (992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
+    #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
 
