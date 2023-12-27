@@ -353,10 +353,11 @@ main {
     }
 
     #signup-form {
-        max-width: 400px;
+        max-width: 450px;
+        max-height: 400px;
         position: absolute;
         left: 10%;
-        top: 150px;
+        top: 5%;
     }
 
     .text-input:hover {
@@ -378,6 +379,11 @@ main {
     /* Gallery */
     #photos {
         column-count: 4;
+    }
+
+    #signup-form {
+        max-height: 500px;
+        top: 9%;
     }
 }
 
